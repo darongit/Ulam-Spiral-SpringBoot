@@ -1,0 +1,29 @@
+<html>
+	<head>
+		<title>Ulam Spiral Generator</title>
+	</head>
+  <body style="background-color: antiquewhite; font-family: Arial, Helvetica, sans-serif;">
+  <div class="container" style="margin:auto; width:75%; padding: 20px;
+  border: 3px solid blue; border-top-left-radius: 100px; border-top-right-radius: 10px; background-color: bisque">
+    <form style="margin:auto; width:50%;">
+      <label for="length"><b>Edge length: </b></label>
+      <input type="text" placeholder="Enter edge length" name="length" value="" id="length" required>
+      <br>
+      <LABEL FOR="onlyprimes">Only prime numbers</LABEL>
+	<INPUT type="Checkbox" name="onlyprimes" id="onlyprimes" value="true">
+      <button type="submit" formmethod="get">Generate</button>
+    </form>
+  </div>
+
+  <div class="container" style="margin:auto; width:75%; padding: 20px; border: 3px solid blue;
+  border-bottom-right-radius: 75px; border-bottom-left-radius: 30px; background-color: coral">
+    <table style="margin: 0 auto;">
+    <tr th:each="row : ${spiral}">
+      <td style="text-align: center" th:each="element : ${row}">
+        <span th:text="${element}"></span>
+      </td>
+    </tr>
+    </table>
+  </div>
+  </body>
+</html>
